@@ -1,0 +1,50 @@
+{# Cellular and Pleated Shades Page 1 #}
+{% extends "layout.njk" %}
+{% set pagename = 'cellular-pleated-1' %}
+{% set activePage = 'cellular-pleated' %}
+{% set topLevelNav = false %}
+{% set showTitle = true %}
+{% set pageLeft = '../index.html' %}
+{% set pageRight = 'cellular-pleated-2.html' %}
+{% set leftArrow = false %}
+{% set rightArrow = true %}
+{% set indicator = 1 %}
+{% set range = range(1, 7) %}
+
+{% block content %}
+<!-- Navbar -->
+{% include "navbar.njk" %}
+<!-- Navbar -->
+
+<!-- Content -->
+<section class="content cp-1">
+  <div class="column column-1">
+    <h1 class="info-heading">Smartly<br>Designed.<br>Supremely<br>Versatile.</h1>
+    <p class="info-description">Your best-selling shades will have even more to love. More styles. More options. More sizes.</p>
+  </div>
+  <div class="column column-2">
+    <img class="image" src="../assets/images/signature-series-0622-cellular-shades-cu18-v1.png" alt="Page Image" />
+  </div>
+  <div class="column column-3">
+    <img class="image" src="../assets/images/SSCS05_RN091615_C_A_cmyk.png" alt="Page Image" />
+    <h2 class="info-list-heading">Designed for Easy Decisions & Easy Sales</h2>
+    <ul class="info-list">
+      <li class="info-list-item">All cellular fabrics available up to 144&quot; wide</li>
+      <li class="info-list-item">Cellular colors available in both light-filtering and blackout fabrics</li>
+      <li class="info-list-item">Collections offered in the same cell sizes for simple shopping</li>
+    </ul>
+    <h2 class="info-list-heading">Stylish Looks for the Fashion Forward</h2>
+    <ul class="info-list">
+      <li class="info-list-item">Larger cellular cell sizes, including NEW 1&frac14;&quot; cell size</li>
+      <li class="info-list-item">On trend grays, saturated neutrals, metallics, and more</li>
+      <li class="info-list-item">Updated premium woven and print pattern fabrics, including pleated menswear-inspired patterns</li>
+      <li class="info-list-item">New Slide-Vue rail colors and room-darkening side channel colors for a flawless finish</li>
+    </ul>
+  </div>
+</section>
+<!-- Content -->
+
+<!-- Pagebar -->
+{% include "pagebar.njk" %}
+<!-- Pagebar -->
+{% endblock %}

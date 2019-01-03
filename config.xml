@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.springswf.sigseriesshow" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Convention Showcase</name>
+    <description>BB Convention Showcase App</description>
+    <author email="imweb@springswindowfashions.com" href="https://www.springswindowfashions.com">IM Web Team</author>
+    <content src="index.html" />
+    <access origin="*" />
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+        <preference name="Orientation" value="landscape" />
+        <preference name="DisallowOverscroll" value="true" />
+        <edit-config file="*-Info.plist" mode="merge" target="UIStatusBarHidden">
+            <true />
+        </edit-config>
+        <edit-config file="*-Info.plist" mode="merge" target="UIViewControllerBasedStatusBarAppearance">
+            <false />
+        </edit-config>
+        <preference name="AllowInlineMediaPlayback" value="true" />
+    </platform>
+    <plugin name="cordova-plugin-whitelist" spec="^1.3.3" />
+    <plugin name="cordova-plugin-inappbrowser" spec="^3.0.0" />
+    <engine name="ios" spec="^4.5.5" />
+</widget>

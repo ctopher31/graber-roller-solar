@@ -1,0 +1,35 @@
+{# Sheer and Layered Shades Page 1 #}
+{% extends "layout.njk" %}
+{% set pagename = 'sheer-layered-1' %}
+{% set activePage = 'sheer-layered' %}
+{% set topLevelNav = false %}
+{% set showTitle = true %}
+{% set pageLeft = '../index.html' %}
+{% set pageRight = 'sheer-layered-2.html' %}
+{% set leftArrow = false %}
+{% set rightArrow = true %}
+{% set indicator = 1 %}
+{% set range = range(1, 7) %}
+
+{% block content %}
+<!-- Navbar -->
+{% include "navbar.njk" %}
+<!-- Navbar -->
+
+<!-- Content -->
+<section class="content sl-1">
+  <div class="column column-1">
+    <h1 class="info-heading">Elegance in a<br>Whole New Light</h1>
+    <p class="info-description">This is where innovation and luxury intertwine. Our sheer and layered shades will delight you with remarkable versatility and sophisticated elegance like no other.</p>
+  </div>
+  <div class="column column-2">
+    <img class="image" src="../assets/images/signature-select-4662-layered-shades-vn17-V1.png" alt="Page Image" />
+    <img class="image" src="../assets/images/signature-series-5180-sheer-shades-rs17-V1.png" alt="Page Image" />
+  </div>
+</section>
+<!-- Content -->
+
+<!-- Pagebar -->
+{% include "pagebar.njk" %}
+<!-- Pagebar -->
+{% endblock %}

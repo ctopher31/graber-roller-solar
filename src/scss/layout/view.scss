@@ -1,0 +1,43 @@
+// View Styles
+.app {
+  height: 76.8rem;
+  overflow: hidden;
+  width: 102.4rem;
+
+  &.allow-overflow {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+.content-container {
+  height: 76.8rem;
+  width: 102.4rem;
+}
+
+// .transition-container {
+//   border-right-color: $brand-color-1;
+//   border-right-style: solid;
+//   border-right-width: .5rem;
+//   opacity: 0;
+//   overflow: hidden;
+//   position: relative;
+//   right: 0;
+//   transition: border-right-width .3s ease-out, opacity .1s ease-out, width .2s ease-out;
+//   width: 10%;
+// }
+//
+// .transition {
+//   border-right-width: 0;
+//   opacity: 1;
+//   transition: border-right-width .3s ease-out, opacity .1s ease-out, width .2s ease-out;
+//   width: 100%;
+// }
+
+.content {
+  background-color: $base-white;
+  display: flex;
+  height: 76.8rem;
+  padding: 7.5rem;
+  width: 102.4rem;
+}

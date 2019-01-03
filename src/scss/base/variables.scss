@@ -1,0 +1,65 @@
+// Variables
+// Grid and Baseline -----------------------------------------------------------
+// Baseline
+$baseline: 1.8rem;
+
+$baseline-pixels: 20px; /* stylelint-disable-line unit-whitelist */
+
+// Grid breakpoints
+$breakpoints: ('xs', 'sm', 'md', 'lg');
+
+$sm-width: 768px; /* stylelint-disable-line unit-whitelist */
+$md-width: 992px; /* stylelint-disable-line unit-whitelist */
+$lg-width: 1200px; /* stylelint-disable-line unit-whitelist */
+
+// Grid Columns
+$columns: 12;
+
+// Typography ------------------------------------------------------------------
+// Fonts
+$heading-font: 'Gotham Book', Helvetica, Arial, sans-serif;
+$primary-font: 'Gotham Book', Helvetica, Arial, sans-serif;
+
+// Primary Font size
+$base-font-size: 1.4rem;
+
+// Font weights
+$primary-weight-light: 300;
+$primary-weight-normal: 500;
+$primary-weight-bold: 700;
+
+// Color Palette ---------------------------------------------------------------
+// Color Sceme: 3 color palette with shades/tints and gray scale
+// Brand primary colors
+$brand-color-1: #615d59; // Pantone Black U
+$brand-color-2: #425866; // Pantone 547 U
+$brand-color-3: #69696d; // Pantone Cool Gray 11 U
+$brand-color-4: #866479; // Pantone 5205 C
+$brand-color-5: #3d7d8b; // Panton 2178 U
+
+// Cellular/Pleated Color
+$brand-color-cellular-pleated: #c0ca80;
+
+// Sheer/Layered Color
+$brand-color-sheer-layered: #9fcfca;
+
+// Gray Scale
+$base-black: #000;
+$base-gray-dark3: #373737;
+$base-gray-dark2: #575757;
+$base-gray-dark1: #656565;
+$base-gray-mid: #767676;
+$base-gray-light1: #979797;
+$base-gray-light2: #c9c9c9;
+$base-gray-light3: #f8f8f8;
+$base-white: #fff;
+
+// Error, warning, success, and info colors
+$brand-error-color: #cb3834;
+$brand-warning-color: #feca3f;
+$brand-success-color: #45a256;
+$brand-info-color: #09c;
+$brand-safety-color: #f79239;
+
+// Genereic Base Colors
+$base-redf00: #f00;

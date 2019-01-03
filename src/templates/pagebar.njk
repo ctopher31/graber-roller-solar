@@ -1,0 +1,8 @@
+{# Pagebar #}
+<section class="pagebar">
+  <ul class="page-nav-list">
+    {% for i in range -%}
+      <li class="page-nav-list-item{% if indicator == i %} active{% endif %}"><a class="page-link" href="{{ activePage }}-{{ i }}.html"></a></li>
+    {%- endfor %}
+  </ul>
+</section>

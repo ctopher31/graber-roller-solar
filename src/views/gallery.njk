@@ -1,0 +1,49 @@
+{# Gallery #}
+{% extends "layout.njk" %}
+{% set pagename = 'gallery' %}
+{% set activePage = 'gallery' %}
+{% set pageLeft = '#' %}
+{% set pageRight = '#' %}
+{% set topLevelNav = true %}
+{% set pageLeft = 'index.html' %}
+{% set pageRight = '#' %}
+{% set leftArrow = true %}
+
+{% block content %}
+<!-- Navbar -->
+{% include "navbar.njk" %}
+<!-- Navbar -->
+
+<!-- Content -->
+<section class="content gallery-content">
+
+  <h1 class="info-heading">Photography to Inspire</h1>
+  <div id="gallery" class="gallery-container">
+    <h2 class="gallery-heading">Cellular Shades</h2>
+    <div id="cellular-gallery" class="gallery-list cellular-gallery"></div>
+  </div>
+  <div class="gallery-container">
+    <h2 class="gallery-heading">Pleated Shades</h2>
+    <div id="pleated-gallery" class="gallery-list pleated-gallery"></div>
+  </div>
+  <div class="gallery-container">
+    <h2 class="gallery-heading">Sheer Shades</h2>
+    <div id="sheer-gallery" class="gallery-list sheer-gallery"></div>
+  </div>
+  <div class="gallery-container">
+    <h2 class="gallery-heading">Layered Shades</h2>
+    <div id="layered-gallery" class="gallery-list layered-gallery"></div>
+  </div>
+
+</section>
+<!-- Content -->
+
+<div id="lightbox" class="lightbox-outer-container hide">
+  <div id="lightbox-inner-container" class="lightbox-inner-container">
+    <div id="lightbox-left" class="lightbox-nav lightbox-left"></div>
+    <div id="lightbox-right" class="lightbox-nav lightbox-right"></div>
+    <div id="lightbox-list" class="lightbox-list"></div>
+  </div>
+</div>
+
+{% endblock %}

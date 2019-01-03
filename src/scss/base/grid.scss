@@ -1,0 +1,71 @@
+// Grid Layout
+%container-base-styles {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $baseline / 2;
+  padding-right: $baseline / 2;
+}
+
+.container {
+  @extend %container-base-styles;
+
+  @include sm {
+    width: $sm-width - $baseline-pixels; /* stylelint-disable-line unit-whitelist */
+  }
+
+  @include md {
+    width: $md-width - $baseline-pixels; /* stylelint-disable-line unit-whitelist */
+  }
+
+  @include lg {
+    width: $lg-width - $baseline-pixels; /* stylelint-disable-line unit-whitelist */
+  }
+}
+
+.container-fluid {
+  @extend %container-base-styles;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: -$baseline / 2;
+  margin-right: -$baseline / 2;
+
+  // @supports (display: grid) {
+  //   display: grid;
+  //   grid-column-gap: $baseline / 2;
+  //   grid-template-columns: repeat(12, 1fr);
+  //   margin: 0 auto;
+  // }
+}
+
+%column-styles {
+  flex-basis: auto;
+  flex-grow: 0;
+  flex-shrink: 1;
+  min-height: .1rem;
+  padding-left: $baseline / 2;
+  padding-right: $baseline / 2;
+
+  // @supports (display: grid) {
+  //   margin: 0;
+  //   padding: 0;
+  //   width: initial;
+  // }
+}
+
+@each $item in $breakpoints {
+
+  @for $i from 1 through $columns {
+
+    .col-#{$item}-#{$i} {
+      @extend %column-styles;
+    }
+
+    @include build-offsets($item, $i, $columns);
+
+    @include build-grid($item, $i, $columns);
+  }
+}

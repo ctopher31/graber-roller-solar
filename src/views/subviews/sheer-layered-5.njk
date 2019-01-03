@@ -1,0 +1,50 @@
+{# Sheer and Layered Shades Page 5 #}
+{% extends "layout.njk" %}
+{% set pagename = 'sheer-layered-5' %}
+{% set activePage = 'sheer-layered' %}
+{% set topLevelNav = false %}
+{% set showTitle = false %}
+{% set pageLeft = 'sheer-layered-4.html' %}
+{% set pageRight = 'sheer-layered-6.html' %}
+{% set leftArrow = true %}
+{% set rightArrow = true %}
+{% set indicator = 5 %}
+{% set range = range(1, 7) %}
+{# {% block scripts %}
+<script src="../assets/js/sheer-layered-swatches.js"></script>
+{% endblock %} #}
+
+{% block content %}
+<!-- Navbar -->
+{% include "navbar.njk" %}
+<!-- Navbar -->
+
+<!-- Content -->
+<section id="sheer-layered-swatches" class="content sl-5">
+  <div class="column column-1">
+    <div id="sheer-swatches" class="swatch-list-container">
+      {# <img class="image" src="../assets/images/Sheer Swatch List Example.png" alt="Swatch List" /> #}
+    </div>
+    <div id="layered-swatches" class="swatch-list-container">
+      {# <img class="image" src="../assets/images/Layered Swatch List Example.png" alt="Swatch List" /> #}
+    </div>
+  </div>
+  <div class="column column-2">
+    <h1 class="info-heading">Fresh,<br>Modern Looks<br>They'll Love</h1>
+    <p class="info-description">With classic neutrals and rich hues for every style in one book, it's easy to create the luxurious look your customers will love.</p>
+  </div>
+  <div class="colorbar"></div>
+</section>
+<!-- Content -->
+
+<div id="lightbox" class="swatch-lightbox-container hide">
+  <figure class="swatch-lightbox-image-container">
+    <img id="lightbox-image" class="swatch-lightbox-image" src="" alt="" />
+    <figcaption id="lightbox-caption" class="swatch-lightbox-caption"></figcaption>
+  </figure>
+</div>
+
+<!-- Pagebar -->
+{% include "pagebar.njk" %}
+<!-- Pagebar -->
+{% endblock %}

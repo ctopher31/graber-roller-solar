@@ -1,0 +1,39 @@
+{# Cellular and Pleated Shades Page 3 #}
+{% extends "layout.njk" %}
+{% set pagename = 'cellular-pleated-3' %}
+{% set activePage = 'cellular-pleated' %}
+{% set topLevelNav = false %}
+{% set showTitle = false %}
+{% set pageLeft = 'cellular-pleated-2.html' %}
+{% set pageRight = 'cellular-pleated-4.html' %}
+{% set leftArrow = true %}
+{% set rightArrow = true %}
+{% set indicator = 3 %}
+{% set range = range(1, 7) %}
+
+{% block content %}
+<!-- Navbar -->
+{% include "navbar.njk" %}
+<!-- Navbar -->
+
+<!-- Content -->
+<section class="content cp-3">
+  <div class="column column-1">
+    <h1 class="info-heading">Cell Sizes<br>Proportioned<br>for Every<br>Window</h1>
+    <p class="info-description">Say hello to the new 1¼" cell size! It's perfect for large windows and the clean lines we love.</p>
+  </div>
+  <div class="column column-2">
+    <img class="image" src="../assets/images/38-sc.png" alt="Page Image" />
+    <img class="image" src="../assets/images/34-sc.png" alt="Page Image" />
+  </div>
+  <div class="column column-3">
+    <img class="image" src="../assets/images/12-dc.png" alt="Page Image" />
+    <img class="image" src="../assets/images/1-14-sc.png" alt="Page Image" />
+  </div>
+</section>
+<!-- Content -->
+
+<!-- Pagebar -->
+{% include "pagebar.njk" %}
+<!-- Pagebar -->
+{% endblock %}

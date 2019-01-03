@@ -1,0 +1,104 @@
+// Mixins
+// Grid mixins
+@mixin xs {
+  @media (max-width: #{$sm-width - 1px}) { /* stylelint-disable-line unit-whitelist */
+    @content;
+  }
+}
+
+@mixin sm-only {
+  @media (min-width: #{$sm-width}) and (max-width: #{$md-width - 1px}) { /* stylelint-disable-line unit-whitelist */
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (min-width: #{$sm-width}) {
+    @content;
+  }
+}
+
+@mixin md-only {
+  @media (min-width: #{$md-width}) and (max-width: #{$lg-width - 1px}) { /* stylelint-disable-line unit-whitelist */
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: #{$md-width}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: #{$lg-width}) {
+    @content;
+  }
+}
+
+@mixin grid-column($column-span, $columns) {
+  width: ($column-span / $columns) * 100 + 0%;
+
+  // @supports (display: grid) {
+  //   grid-column-end: span $column-span;
+  //   grid-column-start: auto;
+  //   width: initial;
+  // }
+}
+
+@mixin build-grid($grid-breakpoint, $grid-span, $columns) {
+
+  .col-#{$grid-breakpoint}-#{$grid-span} {
+
+    @if $grid-breakpoint == 'sm' {
+      @include sm {
+        @include grid-column($grid-span, $columns);
+      }
+    } @else if $grid-breakpoint == 'md' {
+      @include md {
+        @include grid-column($grid-span, $columns);
+      }
+    } @else if $grid-breakpoint == 'lg' {
+      @include lg {
+        @include grid-column($grid-span, $columns);
+      }
+    } @else {
+      @include xs {
+        @include grid-column($grid-span, $columns);
+      }
+    }
+  }
+}
+
+@mixin grid-column-offset($column-start, $columns) {
+  margin-left: ($column-start / $columns) * 100 + 0%;
+
+  // @supports (display: grid) {
+  //   grid-column-start: $column-start + 1 !important; /* stylelint-disable-line declaration-no-important */
+  //   margin: 0;
+  // }
+}
+
+@mixin build-offsets($grid-breakpoint, $grid-start, $columns) {
+
+  .col-#{$grid-breakpoint}-offset-#{$grid-start} {
+
+    @if $grid-breakpoint == 'sm' {
+      @include sm {
+        @include grid-column-offset($grid-start, $columns);
+      }
+    } @else if $grid-breakpoint == 'md' {
+      @include md {
+        @include grid-column-offset($grid-start, $columns);
+      }
+    } @else if $grid-breakpoint == 'lg' {
+      @include lg {
+        @include grid-column-offset($grid-start, $columns);
+      }
+    } @else {
+      @include xs {
+        @include grid-column-offset($grid-start, $columns);
+      }
+    }
+  }
+}
