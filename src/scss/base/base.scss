@@ -8,7 +8,7 @@
 }
 
 html {
-  font-size: 10px; /* stylelint-disable-line unit-whitelist */
+  font-size: 16px; /* stylelint-disable-line unit-whitelist */
   height: 100%;
   line-height: $baseline; // Correct the line height in all browsers
   overflow: hidden;
@@ -33,7 +33,7 @@ body {
   -webkit-text-size-adjust: none; /* prevent webkit from resizing text to fit */  /* stylelint-disable-line property-no-vendor-prefix */
   -webkit-touch-callout: none; /* prevent callout to copy image, etc when tap to hold */  /* stylelint-disable-line property-no-vendor-prefix */
   -webkit-user-select: none; /* prevent copy paste, to allow, change 'none' to 'text' */  /* stylelint-disable-line property-no-vendor-prefix */
-  width: 100%;
+  width: 100vw;
 }
 
 %font-size--1-75 {

@@ -10,73 +10,101 @@
     <link rel="stylesheet" href="../assets/css/styles.min.css">
     
   </head>
-  <body data-page-left="cellular-pleated-5.html" data-page-right="sheer-layered-1.html">
+  <body id="app" class="app" data-page-left="cellular-pleated-5.html" data-page-right="sheer-layered-1.html">
+    <!-- Navbar -->
+    
+<div id="statusbar" class="statusbar"></div>
+<nav class="navbar">
+  
+    <button id="page-left" class="nav-button nav-button--left">
+      <svg class="arrow-icon arrow-icon--left" viewBox="0 0 21 46" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <def>
+          <style>
+          #left-arrow-group {
+            transform: scale(-1, 1) rotate(90deg) translate(12px, -12px);
+          }
+          </style>
+        </def>
+        <g id="left-arrow-group">
+          <polygon id="Triangle" points="10.039167 13 10.8752387 13 33 29.7970134 31.3522564 32.6973418 10.5516845 17.232371 -10.2051484 32.8545862 -12 29.7970134" fill="#615D59"></polygon>
+        </g>
+      </svg>
+    </button>
+  
+  <div class="navbar--content">
+    
+    
+      <div class="title">cellular-pleated-6</div>
+    
+  </div>
+  
+    <button id="page-right" class="nav-button nav-button--right">
+      <svg class="arrow-icon arrow-icon--right" viewBox="0 0 21 46" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <def>
+          <style>
+          #right-arrow-group {
+            transform: rotate(90deg) translate(12px, -33px);
+          }
+          </style>
+        </def>
+        <g id="right-arrow-group">
+          <polygon id="Triangle" points="10.039167 13 10.8752387 13 33 29.7970134 31.3522564 32.6973418 10.5516845 17.232371 -10.2051484 32.8545862 -12 29.7970134" fill="#615D59"></polygon>
+        </g>
+      </svg>
+    </button>
+  
+</nav>
 
-    <div class="app">
-      <div class="content-container transition-container">
-        
+
+
+    <!-- Navbar -->
+
+    <div class="content-container transition-container">
+      
 <!-- Navbar -->
 
 <div id="statusbar" class="statusbar"></div>
 <nav class="navbar">
-  <div class="brand">
-    
-      <svg class="product-icon cellular-pleated-icon" width="85px" height="63px" viewBox="0 0 85 63" version="1.1" xmlns="http://www.w3.org/2000/svg">
-        <g id="Cellular-and-Pleated---Product-Icon">
-          <path d="M0,0 L85,0 L85,55 C85,59.418278 81.418278,63 77,63 L0,63 L0,0 Z" id="Rectangle-2" fill="#C0CA80" fill-rule="nonzero"></path>
-          <path d="M44.5085008,54.4277908 C41.2593942,54.4277908 38.2668409,53.8292802 35.5307512,52.6322409 C32.7946614,51.4352016 30.4219942,49.799985 28.4126783,47.726542 C26.4033624,45.653099 24.8322719,43.2056179 23.6993597,40.3840254 C22.5664476,37.5624328 22,34.5485041 22,31.342149 L22,31.2138954 C22,28.0502916 22.5664476,25.0577384 23.6993597,22.2361458 C24.8322719,19.4145532 26.4033624,16.9456968 28.4126783,14.8295024 C30.4219942,12.713308 32.8160368,11.0460283 35.594878,9.82761331 C38.3737191,8.60919835 41.4090232,8 44.7008811,8 C46.7529485,8 48.6019189,8.17100304 50.2478479,8.51301426 C51.8937769,8.85502548 53.4221166,9.33597154 54.8329128,9.95586688 C56.2437091,10.5757622 57.5476073,11.3239005 58.7446466,12.2003043 C59.9416859,13.076708 61.0959564,14.0492878 62.2074929,15.1180729 L58.7446466,18.8374263 C56.8208335,17.0418674 54.7581093,15.5669662 52.556412,14.4126783 C50.3547148,13.2583904 47.7148553,12.6812552 44.6367544,12.6812552 C42.157173,12.6812552 39.8593196,13.1515135 37.7431252,14.0920444 C35.6269308,15.0325752 33.7886481,16.3364734 32.2282219,18.0037781 C30.6677957,19.6710828 29.449399,21.6269301 28.5729952,23.8713788 C27.6965915,26.1158274 27.2583962,28.5205577 27.2583962,31.0856418 L27.2583962,31.2138954 C27.2583962,33.8217309 27.6965915,36.2478366 28.5729952,38.4922853 C29.449399,40.7367339 30.6677957,42.6925812 32.2282219,44.3598859 C33.7886481,46.0271906 35.6269308,47.3417765 37.7431252,48.303683 C39.8593196,49.2655896 42.157173,49.7465357 44.6367544,49.7465357 C47.7148553,49.7465357 50.3654025,49.1800881 52.5884754,48.0471759 C54.8115484,46.9142637 56.9918372,45.3217979 59.1294073,43.2697306 L62.464,46.5401965 C61.3097121,47.7372358 60.1020031,48.8166925 58.8408368,49.778599 C57.5796704,50.7405056 56.2223337,51.5634578 54.7687861,52.2474802 C53.3152384,52.9315026 51.7548356,53.4658871 50.0875309,53.8506498 C48.4202262,54.2354124 46.5605681,54.4277908 44.5085008,54.4277908 Z" id="C" fill="#FFFFFF">
-          </path>
+  
+    <button id="page-left" class="nav-button nav-button--left">
+      <svg class="arrow-icon arrow-icon--left" viewBox="0 0 21 46" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <def>
+          <style>
+          #left-arrow-group {
+            transform: scale(-1, 1) rotate(90deg) translate(12px, -12px);
+          }
+          </style>
+        </def>
+        <g id="left-arrow-group">
+          <polygon id="Triangle" points="10.039167 13 10.8752387 13 33 29.7970134 31.3522564 32.6973418 10.5516845 17.232371 -10.2051484 32.8545862 -12 29.7970134" fill="#615D59"></polygon>
         </g>
       </svg>
-      
-        <h1 class="product-title"><span class="title-med-weight">Cellular and</span><br>Pleated Shades</h1>
-      
+    </button>
+  
+  <div class="navbar--content">
+    
+    
+      <div class="title">cellular-pleated-6</div>
     
   </div>
-  <div class="home-container">
-    <a class="home-link" href="../index.html">
-      <svg class="home-icon" width="46px" height="51px" viewBox="0 0 46 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <g id="Home-Icon" transform="translate(-28.000000, -35.000000)">
-          <path d="M56,65 L56,53 L49,53 L49,65 L40,65 L40,47 L37,47 L45,40.8064516 L45,35 L49,35 L49,37.7096774 L52.5,35 L68,47 L64,47 L64,65 L56,65 Z" id="Combined-Shape" fill-opacity="0.3" fill="#615D59" fill-rule="nonzero"></path>
-          <text id="Home" font-family="Gotham Book, Gotham" font-size="16" font-weight="300" fill="#615D59" fill-opacity="0.5">
-            <tspan x="27.408" y="85">Home</tspan>
-          </text>
+  
+    <button id="page-right" class="nav-button nav-button--right">
+      <svg class="arrow-icon arrow-icon--right" viewBox="0 0 21 46" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <def>
+          <style>
+          #right-arrow-group {
+            transform: rotate(90deg) translate(12px, -33px);
+          }
+          </style>
+        </def>
+        <g id="right-arrow-group">
+          <polygon id="Triangle" points="10.039167 13 10.8752387 13 33 29.7970134 31.3522564 32.6973418 10.5516845 17.232371 -10.2051484 32.8545862 -12 29.7970134" fill="#615D59"></polygon>
         </g>
       </svg>
-    </a>
-  </div>
+    </button>
+  
 </nav>
 
-<button id="page-left" class="page-nav-button page-left-button">
-  <svg class="arrow-icon left-arrow-icon" width="21px" height="46px" viewBox="0 0 21 46" version="1.1" xmlns="http://www.w3.org/2000/svg">
-    <def>
-      <style>
-      #left-arrow-group {
-        transform: scale(-1, 1) rotate(90deg) translate(12px, -12px);
-      }
-      </style>
-    </def>
-    <g id="left-arrow-group">
-      <polygon id="Triangle" points="10.039167 13 10.8752387 13 33 29.7970134 31.3522564 32.6973418 10.5516845 17.232371 -10.2051484 32.8545862 -12 29.7970134" fill="#615D59"></polygon>
-    </g>
-  </svg>
-</button>
-
-
-<button id="page-right" class="page-nav-button page-right-button">
-  <svg class="arrow-icon right-arrow-icon" width="21px" height="46px" viewBox="0 0 21 46" version="1.1" xmlns="http://www.w3.org/2000/svg">
-    <def>
-      <style>
-      #right-arrow-group {
-        transform: rotate(90deg) translate(12px, -33px);
-      }
-      </style>
-    </def>
-    <g id="right-arrow-group">
-      <polygon id="Triangle" points="10.039167 13 10.8752387 13 33 29.7970134 31.3522564 32.6973418 10.5516845 17.232371 -10.2051484 32.8545862 -12 29.7970134" fill="#615D59"></polygon>
-    </g>
-  </svg>
-</button>
 
 
 <!-- Navbar -->
@@ -117,13 +145,18 @@
 
 <!-- Pagebar -->
 
-      </div>
     </div>
 
-    <div class="popup-video-container">
-      <video id="video" class="video" loop src="../assets/videos/convention-video.mp4" width="1024" height:="768" type="video/mp4">
-      </video>
-    </div>
+    <!-- Tabbar -->
+    <div class="tabbar">
+  <ul class="tabbar--list">
+    <li class="tabbar--list-item"><a class="tabbar--nav-link" href="index.html"><img class="svg-icon home-svg" src="/assets/images/icons/home.svg" alt="Home"><br>Home</a></li>
+    <li class="tabbar--list-item"><a class="tabbar--nav-link" href="product-catalog.html"><img class="svg-icon catalog-svg" src="/assets/images/icons/catalog.svg" alt="Product Catalog"><br>Catalog</a></li>
+    <li class="tabbar--list-item"><a class="tabbar--nav-link" href="collections.html"><img class="svg-icon collections-svg" src="/assets/images/icons/collections.svg" alt="Collections"><br>Collections</a></li>
+    <li class="tabbar--list-item"><a class="tabbar--nav-link" href="media.html"><img class="svg-icon media-svg" src="/assets/images/icons/media.svg" alt="Media Library"><br>Media</a></li>
+  </ul>
+</div>
+    <!-- Tabbar -->
 
     <script src="../cordova.js"></script>
     <script src="../assets/js/app.min.js"></script>

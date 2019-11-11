@@ -1,18 +1,12 @@
 // View Styles
-.app {
-  height: 76.8rem;
-  overflow: hidden;
-  width: 102.4rem;
-
-  &.allow-overflow {
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
-  }
+.content-container {
+  height: 100%;
+  width: 100%;
 }
 
-.content-container {
-  height: 76.8rem;
-  width: 102.4rem;
+.content {
+  height: 100%;
+  width: 100%;
 }
 
 // .transition-container {

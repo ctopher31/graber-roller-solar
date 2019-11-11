@@ -65,6 +65,13 @@ const loadPdf = (event) => {
 };
 
 const run = () => {
+  if (navigator.userAgent.match(/Android/i)) {
+    document.body.classList.add('android');
+  }
+  if (navigator.userAgent.match(/(iPad|iPhone|iPod)/i)) {
+    document.body.classList.add('ios');
+  }
+
   setSwipeNav();
 
   const pageLeft = document.getElementById('page-left');

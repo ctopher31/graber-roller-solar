@@ -10,18 +10,18 @@
     <link rel="stylesheet" href="{% if topLevelNav == false %}../{% endif %}assets/css/styles.min.css">
     {% block links %}{% endblock %}
   </head>
-  <body data-page-left="{{ pageLeft }}" data-page-right="{{ pageRight }}">
+  <body id="app" class="app" data-page-left="{{ pageLeft }}" data-page-right="{{ pageRight }}">
+    <!-- Navbar -->
+    {% include "navbar.njk" %}
+    <!-- Navbar -->
 
-    <div class="app">
-      <div class="content-container transition-container">
-        {% block content %}{% endblock %}
-      </div>
+    <div class="content-container transition-container">
+      {% block content %}{% endblock %}
     </div>
 
-    <div class="popup-video-container">
-      <video id="video" class="video" loop src="{% if topLevelNav == false %}../{% endif %}assets/videos/convention-video.mp4" width="1024" height:="768" type="video/mp4">
-      </video>
-    </div>
+    <!-- Tabbar -->
+    {% include "tabbar.njk" %}
+    <!-- Tabbar -->
 
     <script src="{% if topLevelNav == false %}../{% endif %}cordova.js"></script>
     <script src="{% if topLevelNav == false %}../{% endif %}assets/js/app.min.js"></script>

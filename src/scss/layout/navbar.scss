@@ -1,88 +1,76 @@
 // Navbar Styles
+/* Navbar ============================================== */
 .navbar {
+  align-items: center;
+  background: #fff;
+  border-bottom: .0625rem solid #c9d0c3;
+  color: #0d0e12;
   display: flex;
-  justify-content: space-between;
-  position: absolute;
-  top: 2.65rem;
-  width: 102.4rem;
-  z-index: 9;
+  flex: none;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100vw;
+  z-index: 999;
+}
+
+.ios .navbar {
+  height: 4.25rem;
+  padding-top: 1.5rem;
+}
+
+.android {
+
+  .statusbar {
+    background: #fff;
+    height: 1.5rem;
+    width: 100%;
+  }
+}
+
+.navbar--content {
+  display: flex;
+  flex: 1 0 auto;
+  justify-content: center;
+  padding-left: .5rem;
+  padding-right: .5rem;
 }
 
 .brand {
+  align-items: center;
   display: flex;
-}
-
-.product-icon {
   flex: 0 1 auto;
-  height: 4.9rem;
-  margin-right: 1rem;
-  width: 6.3rem;
 }
 
-.product-title {
+.brand--logo {
+  width: 7rem;
+}
+
+.title {
   flex: 0 1 auto;
-  font-size: 1.8rem;
-  letter-spacing: .1rem;
-  line-height: 1.08em;
-  margin-bottom: 0;
-  padding-top: .8rem;
 }
 
-.title-med-weight {
-  font-family: 'Gotham Medium', sans-serif;
-}
-
-.home-container {
-  position: relative;
-  right: 2.2rem;
-}
-
-.home-link {
-  border-radius: .3rem;
-  display: flex;
-  justify-content: center;
-  margin-top: -.7rem;
-  padding: 1rem;
-
-  &:active,
-  &:focus {
-    background-color: rgba(0, 0, 0, .1);
-    outline-width: 0;
-  }
-}
-
-.home-icon {
-  height: 3.825rem;
-  width: 3.45rem;
-}
-
-.page-nav-button {
-  -webkit-appearance: none; /* stylelint-disable-line property-no-vendor-prefix */
-  background-color: transparent;
+.nav-button {
+  background: transparent;
   border: 0;
-  border-radius: .3rem;
-  flex: none;
-  padding: 2rem;
-  position: absolute;
-  top: calc(50% - 3.725rem);
-  z-index: 9;
-
-  &:active,
-  &:focus {
-    background-color: rgba(0, 0, 0, .1);
-    outline-width: 0;
-  }
-}
-
-.page-left-button {
-  left: 0;
-}
-
-.page-right-button {
-  right: 0;
+  color: #0c0d11;
+  height: 100%;
+  margin: 0;
+  padding: .5rem;
+  width: 2rem;
 }
 
 .arrow-icon {
-  height: 3.45rem;
-  width: 1.575rem;
+  height: 100%;
 }
+
+.nav-button--left {
+  justify-self: flex-start;
+}
+
+.nav-button--right {
+  justify-self: flex-end;
+}
+/* Navbar ============================================== */

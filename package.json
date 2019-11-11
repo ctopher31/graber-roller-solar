@@ -1,7 +1,7 @@
 {
-  "name": "bbshow",
+  "name": "grollersolar",
   "version": "1.0.0",
-  "description": "BB Convention Showcase App",
+  "description": "Graber Roller and Solar Shades Digital Sample Book",
   "main": "index.js",
   "scripts": {
     "start": "test gulp",
@@ -12,9 +12,9 @@
     "url": ""
   },
   "keywords": [
-    "Budget Blinds",
-    "Cellular",
-    "Pleated",
+    "Graber Blinds",
+    "Roller",
+    "Solar",
     "Shades"
   ],
   "author": "Christopher Arritt",

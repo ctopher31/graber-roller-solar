@@ -10,71 +10,97 @@
     <link rel="stylesheet" href="../assets/css/styles.min.css">
     
   </head>
-  <body data-page-left="sheer-layered-2.html" data-page-right="sheer-layered-4.html">
+  <body id="app" class="app" data-page-left="sheer-layered-2.html" data-page-right="sheer-layered-4.html">
+    <!-- Navbar -->
+    
+<div id="statusbar" class="statusbar"></div>
+<nav class="navbar">
+  
+    <button id="page-left" class="nav-button nav-button--left">
+      <svg class="arrow-icon arrow-icon--left" viewBox="0 0 21 46" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <def>
+          <style>
+          #left-arrow-group {
+            transform: scale(-1, 1) rotate(90deg) translate(12px, -12px);
+          }
+          </style>
+        </def>
+        <g id="left-arrow-group">
+          <polygon id="Triangle" points="10.039167 13 10.8752387 13 33 29.7970134 31.3522564 32.6973418 10.5516845 17.232371 -10.2051484 32.8545862 -12 29.7970134" fill="#615D59"></polygon>
+        </g>
+      </svg>
+    </button>
+  
+  <div class="navbar--content">
+    
+    
+  </div>
+  
+    <button id="page-right" class="nav-button nav-button--right">
+      <svg class="arrow-icon arrow-icon--right" viewBox="0 0 21 46" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <def>
+          <style>
+          #right-arrow-group {
+            transform: rotate(90deg) translate(12px, -33px);
+          }
+          </style>
+        </def>
+        <g id="right-arrow-group">
+          <polygon id="Triangle" points="10.039167 13 10.8752387 13 33 29.7970134 31.3522564 32.6973418 10.5516845 17.232371 -10.2051484 32.8545862 -12 29.7970134" fill="#615D59"></polygon>
+        </g>
+      </svg>
+    </button>
+  
+</nav>
 
-    <div class="app">
-      <div class="content-container transition-container">
-        
+
+
+    <!-- Navbar -->
+
+    <div class="content-container transition-container">
+      
 <!-- Navbar -->
 
 <div id="statusbar" class="statusbar"></div>
 <nav class="navbar">
-  <div class="brand">
-    
-      <svg class="product-icon sheer-layered-icon" width="85px" height="63px" viewBox="0 0 85 63" version="1.1" xmlns="http://www.w3.org/2000/svg">
-        <g id="Sheer-and-Layered---Product-Icon">
-          <path d="M0,0 L85,0 L85,55 C85,59.418278 81.418278,63 77,63 L0,63 L0,0 Z" id="Rectangle-2" fill="#9FCFCA" fill-rule="nonzero"></path>
-          <path d="M43.59,54.8 C39.9499818,54.8 36.6241817,54.2041726 33.6125,53.0125 C30.6008183,51.8208274 27.7300137,49.9900123 25,47.52 L28.185,43.75 C30.5683453,45.9166775 32.9733212,47.530828 35.4,48.5925 C37.8266788,49.654172 40.6216508,50.185 43.785,50.185 C46.8616821,50.185 49.3208241,49.4591739 51.1625,48.0075 C53.0041759,46.5558261 53.925,44.7033446 53.925,42.45 L53.925,42.32 C53.925,41.2799948 53.7516684,40.3375042 53.405,39.4925 C53.0583316,38.6474958 52.451671,37.8783368 51.585,37.185 C50.718329,36.4916632 49.515841,35.8633361 47.9775,35.3 C46.439159,34.7366638 44.4783452,34.1950026 42.095,33.675 C39.494987,33.1116638 37.230843,32.4616703 35.3025,31.725 C33.374157,30.9883296 31.781673,30.1000052 30.525,29.06 C29.268327,28.0199948 28.3366697,26.8066736 27.73,25.42 C27.1233303,24.0333264 26.82,22.4083426 26.82,20.545 L26.82,20.415 C26.82,18.6383244 27.1883297,16.9916742 27.925,15.475 C28.6616704,13.9583257 29.7016599,12.6475055 31.045,11.5425 C32.38834,10.4374945 33.9699909,9.57083648 35.79,8.9425 C37.6100091,8.31416353 39.6033225,8 41.77,8 C45.1066834,8 48.0208209,8.46582868 50.5125,9.3975 C53.0041791,10.3291713 55.4199883,11.7266573 57.76,13.59 L54.77,17.555 C52.6466561,15.821658 50.5125107,14.5650039 48.3675,13.785 C46.2224893,13.0049961 43.9800117,12.615 41.64,12.615 C38.649985,12.615 36.288342,13.3191596 34.555,14.7275 C32.821658,16.1358404 31.955,17.8799896 31.955,19.96 L31.955,20.09 C31.955,21.1733387 32.1283316,22.1374958 32.475,22.9825 C32.8216684,23.8275042 33.4499955,24.6074964 34.36,25.3225 C35.2700045,26.0375036 36.5266587,26.6874971 38.13,27.2725 C39.7333414,27.8575029 41.7916541,28.4099974 44.305,28.93 C49.3750254,30.0566723 53.112488,31.6166567 55.5175,33.61 C57.922512,35.6033433 59.125,38.333316 59.125,41.8 L59.125,41.93 C59.125,43.8800097 58.7350039,45.6458254 57.955,47.2275 C57.1749961,48.8091746 56.1025068,50.1633277 54.7375,51.29 C53.3724932,52.4166723 51.7366762,53.2833303 49.83,53.89 C47.9233238,54.4966697 45.8433446,54.8 43.59,54.8 Z" id="S" fill="#FFFFFF">
-          </path>
+  
+    <button id="page-left" class="nav-button nav-button--left">
+      <svg class="arrow-icon arrow-icon--left" viewBox="0 0 21 46" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <def>
+          <style>
+          #left-arrow-group {
+            transform: scale(-1, 1) rotate(90deg) translate(12px, -12px);
+          }
+          </style>
+        </def>
+        <g id="left-arrow-group">
+          <polygon id="Triangle" points="10.039167 13 10.8752387 13 33 29.7970134 31.3522564 32.6973418 10.5516845 17.232371 -10.2051484 32.8545862 -12 29.7970134" fill="#615D59"></polygon>
         </g>
       </svg>
-      
+    </button>
+  
+  <div class="navbar--content">
+    
     
   </div>
-  <div class="home-container">
-    <a class="home-link" href="../index.html">
-      <svg class="home-icon" width="46px" height="51px" viewBox="0 0 46 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <g id="Home-Icon" transform="translate(-28.000000, -35.000000)">
-          <path d="M56,65 L56,53 L49,53 L49,65 L40,65 L40,47 L37,47 L45,40.8064516 L45,35 L49,35 L49,37.7096774 L52.5,35 L68,47 L64,47 L64,65 L56,65 Z" id="Combined-Shape" fill-opacity="0.3" fill="#615D59" fill-rule="nonzero"></path>
-          <text id="Home" font-family="Gotham Book, Gotham" font-size="16" font-weight="300" fill="#615D59" fill-opacity="0.5">
-            <tspan x="27.408" y="85">Home</tspan>
-          </text>
+  
+    <button id="page-right" class="nav-button nav-button--right">
+      <svg class="arrow-icon arrow-icon--right" viewBox="0 0 21 46" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <def>
+          <style>
+          #right-arrow-group {
+            transform: rotate(90deg) translate(12px, -33px);
+          }
+          </style>
+        </def>
+        <g id="right-arrow-group">
+          <polygon id="Triangle" points="10.039167 13 10.8752387 13 33 29.7970134 31.3522564 32.6973418 10.5516845 17.232371 -10.2051484 32.8545862 -12 29.7970134" fill="#615D59"></polygon>
         </g>
       </svg>
-    </a>
-  </div>
+    </button>
+  
 </nav>
 
-<button id="page-left" class="page-nav-button page-left-button">
-  <svg class="arrow-icon left-arrow-icon" width="21px" height="46px" viewBox="0 0 21 46" version="1.1" xmlns="http://www.w3.org/2000/svg">
-    <def>
-      <style>
-      #left-arrow-group {
-        transform: scale(-1, 1) rotate(90deg) translate(12px, -12px);
-      }
-      </style>
-    </def>
-    <g id="left-arrow-group">
-      <polygon id="Triangle" points="10.039167 13 10.8752387 13 33 29.7970134 31.3522564 32.6973418 10.5516845 17.232371 -10.2051484 32.8545862 -12 29.7970134" fill="#615D59"></polygon>
-    </g>
-  </svg>
-</button>
-
-
-<button id="page-right" class="page-nav-button page-right-button">
-  <svg class="arrow-icon right-arrow-icon" width="21px" height="46px" viewBox="0 0 21 46" version="1.1" xmlns="http://www.w3.org/2000/svg">
-    <def>
-      <style>
-      #right-arrow-group {
-        transform: rotate(90deg) translate(12px, -33px);
-      }
-      </style>
-    </def>
-    <g id="right-arrow-group">
-      <polygon id="Triangle" points="10.039167 13 10.8752387 13 33 29.7970134 31.3522564 32.6973418 10.5516845 17.232371 -10.2051484 32.8545862 -12 29.7970134" fill="#615D59"></polygon>
-    </g>
-  </svg>
-</button>
 
 
 <!-- Navbar -->
@@ -106,13 +132,18 @@
 
 <!-- Pagebar -->
 
-      </div>
     </div>
 
-    <div class="popup-video-container">
-      <video id="video" class="video" loop src="../assets/videos/convention-video.mp4" width="1024" height:="768" type="video/mp4">
-      </video>
-    </div>
+    <!-- Tabbar -->
+    <div class="tabbar">
+  <ul class="tabbar--list">
+    <li class="tabbar--list-item"><a class="tabbar--nav-link" href="index.html"><img class="svg-icon home-svg" src="/assets/images/icons/home.svg" alt="Home"><br>Home</a></li>
+    <li class="tabbar--list-item"><a class="tabbar--nav-link" href="product-catalog.html"><img class="svg-icon catalog-svg" src="/assets/images/icons/catalog.svg" alt="Product Catalog"><br>Catalog</a></li>
+    <li class="tabbar--list-item"><a class="tabbar--nav-link" href="collections.html"><img class="svg-icon collections-svg" src="/assets/images/icons/collections.svg" alt="Collections"><br>Collections</a></li>
+    <li class="tabbar--list-item"><a class="tabbar--nav-link" href="media.html"><img class="svg-icon media-svg" src="/assets/images/icons/media.svg" alt="Media Library"><br>Media</a></li>
+  </ul>
+</div>
+    <!-- Tabbar -->
 
     <script src="../cordova.js"></script>
     <script src="../assets/js/app.min.js"></script>

@@ -10,46 +10,66 @@
     <link rel="stylesheet" href="assets/css/styles.min.css">
     
   </head>
-  <body data-page-left="index.html" data-page-right="#">
+  <body id="app" class="app" data-page-left="index.html" data-page-right="#">
+    <!-- Navbar -->
+    
+<div id="statusbar" class="statusbar"></div>
+<nav class="navbar">
+  
+    <button id="page-left" class="nav-button nav-button--left">
+      <svg class="arrow-icon arrow-icon--left" viewBox="0 0 21 46" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <def>
+          <style>
+          #left-arrow-group {
+            transform: scale(-1, 1) rotate(90deg) translate(12px, -12px);
+          }
+          </style>
+        </def>
+        <g id="left-arrow-group">
+          <polygon id="Triangle" points="10.039167 13 10.8752387 13 33 29.7970134 31.3522564 32.6973418 10.5516845 17.232371 -10.2051484 32.8545862 -12 29.7970134" fill="#615D59"></polygon>
+        </g>
+      </svg>
+    </button>
+  
+  <div class="navbar--content">
+    
+    
+  </div>
+  
+</nav>
 
-    <div class="app">
-      <div class="content-container transition-container">
-        
+
+
+    <!-- Navbar -->
+
+    <div class="content-container transition-container">
+      
 <!-- Navbar -->
 
 <div id="statusbar" class="statusbar"></div>
 <nav class="navbar">
-  <div class="brand">
-    
-  </div>
-  <div class="home-container">
-    <a class="home-link" href="index.html">
-      <svg class="home-icon" width="46px" height="51px" viewBox="0 0 46 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <g id="Home-Icon" transform="translate(-28.000000, -35.000000)">
-          <path d="M56,65 L56,53 L49,53 L49,65 L40,65 L40,47 L37,47 L45,40.8064516 L45,35 L49,35 L49,37.7096774 L52.5,35 L68,47 L64,47 L64,65 L56,65 Z" id="Combined-Shape" fill-opacity="0.3" fill="#615D59" fill-rule="nonzero"></path>
-          <text id="Home" font-family="Gotham Book, Gotham" font-size="16" font-weight="300" fill="#615D59" fill-opacity="0.5">
-            <tspan x="27.408" y="85">Home</tspan>
-          </text>
+  
+    <button id="page-left" class="nav-button nav-button--left">
+      <svg class="arrow-icon arrow-icon--left" viewBox="0 0 21 46" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <def>
+          <style>
+          #left-arrow-group {
+            transform: scale(-1, 1) rotate(90deg) translate(12px, -12px);
+          }
+          </style>
+        </def>
+        <g id="left-arrow-group">
+          <polygon id="Triangle" points="10.039167 13 10.8752387 13 33 29.7970134 31.3522564 32.6973418 10.5516845 17.232371 -10.2051484 32.8545862 -12 29.7970134" fill="#615D59"></polygon>
         </g>
       </svg>
-    </a>
+    </button>
+  
+  <div class="navbar--content">
+    
+    
   </div>
+  
 </nav>
-
-<button id="page-left" class="page-nav-button page-left-button">
-  <svg class="arrow-icon left-arrow-icon" width="21px" height="46px" viewBox="0 0 21 46" version="1.1" xmlns="http://www.w3.org/2000/svg">
-    <def>
-      <style>
-      #left-arrow-group {
-        transform: scale(-1, 1) rotate(90deg) translate(12px, -12px);
-      }
-      </style>
-    </def>
-    <g id="left-arrow-group">
-      <polygon id="Triangle" points="10.039167 13 10.8752387 13 33 29.7970134 31.3522564 32.6973418 10.5516845 17.232371 -10.2051484 32.8545862 -12 29.7970134" fill="#615D59"></polygon>
-    </g>
-  </svg>
-</button>
 
 
 
@@ -88,13 +108,18 @@
 </div>
 
 
-      </div>
     </div>
 
-    <div class="popup-video-container">
-      <video id="video" class="video" loop src="assets/videos/convention-video.mp4" width="1024" height:="768" type="video/mp4">
-      </video>
-    </div>
+    <!-- Tabbar -->
+    <div class="tabbar">
+  <ul class="tabbar--list">
+    <li class="tabbar--list-item"><a class="tabbar--nav-link" href="index.html"><img class="svg-icon home-svg" src="/assets/images/icons/home.svg" alt="Home"><br>Home</a></li>
+    <li class="tabbar--list-item"><a class="tabbar--nav-link" href="product-catalog.html"><img class="svg-icon catalog-svg" src="/assets/images/icons/catalog.svg" alt="Product Catalog"><br>Catalog</a></li>
+    <li class="tabbar--list-item"><a class="tabbar--nav-link" href="collections.html"><img class="svg-icon collections-svg" src="/assets/images/icons/collections.svg" alt="Collections"><br>Collections</a></li>
+    <li class="tabbar--list-item"><a class="tabbar--nav-link" href="media.html"><img class="svg-icon media-svg" src="/assets/images/icons/media.svg" alt="Media Library"><br>Media</a></li>
+  </ul>
+</div>
+    <!-- Tabbar -->
 
     <script src="cordova.js"></script>
     <script src="assets/js/app.min.js"></script>

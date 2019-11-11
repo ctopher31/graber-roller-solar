@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.springswf.sigseriesshow" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Convention Showcase</name>
-    <description>BB Convention Showcase App</description>
+<widget id="com.springswf.grabersolarbook" version="2.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Graber Roller Solar Sample Book</name>
+    <description>Graber Sample Book App</description>
     <author email="imweb@springswindowfashions.com" href="https://www.springswindowfashions.com">IM Web Team</author>
     <content src="index.html" />
     <access origin="*" />
