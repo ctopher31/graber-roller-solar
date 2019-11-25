@@ -1,22 +1,16 @@
 {# Gallery #}
 {% extends "layout.njk" %}
-{% set pagename = 'gallery' %}
-{% set activePage = 'gallery' %}
+{% set pagename = 'Media' %}
+{% set activePage = 'media' %}
 {% set pageLeft = '#' %}
 {% set pageRight = '#' %}
 {% set topLevelNav = true %}
-{% set pageLeft = 'index.html' %}
-{% set pageRight = '#' %}
-{% set leftArrow = true %}
+{% set showTitle = true %}
 
 {% block content %}
-<!-- Navbar -->
-{% include "navbar.njk" %}
-<!-- Navbar -->
 
 <!-- Content -->
 <section class="content gallery-content">
-
   <h1 class="info-heading">Photography to Inspire</h1>
   <div id="gallery" class="gallery-container">
     <h2 class="gallery-heading">Cellular Shades</h2>
@@ -34,7 +28,6 @@
     <h2 class="gallery-heading">Layered Shades</h2>
     <div id="layered-gallery" class="gallery-list layered-gallery"></div>
   </div>
-
 </section>
 <!-- Content -->
 
