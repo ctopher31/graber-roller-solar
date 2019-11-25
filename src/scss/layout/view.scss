@@ -1,11 +1,21 @@
 // View Styles
 .content-container {
+  background-color: $base-white;
   height: 100%;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: auto;
+  padding-bottom: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 4.2rem;
   width: 100%;
 }
 
 .content {
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
   width: 100%;
 }
 
@@ -27,11 +37,3 @@
 //   transition: border-right-width .3s ease-out, opacity .1s ease-out, width .2s ease-out;
 //   width: 100%;
 // }
-
-.content {
-  background-color: $base-white;
-  display: flex;
-  height: 76.8rem;
-  padding: 7.5rem;
-  width: 102.4rem;
-}

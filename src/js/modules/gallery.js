@@ -1,9 +1,7 @@
 // Gallery
 const path = 'assets/images/roomscenes';
-const cellularGallery = document.getElementById('cellular-gallery');
-const pleatedGallery = document.getElementById('pleated-gallery');
-const sheerGallery = document.getElementById('sheer-gallery');
-const layeredGallery = document.getElementById('layered-gallery');
+const rollerGallery = document.getElementById('roller-gallery');
+const solarGallery = document.getElementById('solar-gallery');
 const lightBox = document.getElementById('lightbox');
 const lightBoxInnerContainer = document.getElementById('lightbox-inner-container');
 const lightBoxLeft = document.getElementById('lightbox-left');
@@ -63,6 +61,8 @@ export default () => {
   getImages()
     .then((images) => {
       images.map((image) => {
+        const listItem = document.createElement('div');
+        listItem.classList.add('gallery-list-item');
         const container = document.createElement('div');
         container.classList.add('gallery-image-container');
         const img = document.createElement('img');
@@ -70,15 +70,12 @@ export default () => {
         img.alt = image.caption;
         img.classList.add('gallery-image');
         container.appendChild(img);
+        listItem.appendChild(container);
         img.addEventListener('click', imageClickHandler, false);
-        if (image.productline === 'cellular') {
-          cellularGallery.appendChild(container);
-        } else if (image.productline === 'pleated') {
-          pleatedGallery.appendChild(container);
-        } else if (image.productline === 'sheer') {
-          sheerGallery.appendChild(container);
-        } else if (image.productline === 'layered') {
-          layeredGallery.appendChild(container);
+        if (image.productline === 'roller') {
+          rollerGallery.appendChild(listItem);
+        } else if (image.productline === 'solar') {
+          solarGallery.appendChild(listItem);
         }
         return false;
       });

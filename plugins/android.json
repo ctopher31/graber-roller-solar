@@ -8,10 +8,10 @@
   },
   "installed_plugins": {
     "cordova-plugin-inappbrowser": {
-      "PACKAGE_NAME": "$(PRODUCT_BUNDLE_IDENTIFIER)"
+      "PACKAGE_NAME": "com.springswf.grabersolarbook"
     },
     "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "$(PRODUCT_BUNDLE_IDENTIFIER)"
+      "PACKAGE_NAME": "com.springswf.grabersolarbook"
     }
   },
   "dependent_plugins": {}
