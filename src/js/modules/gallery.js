@@ -90,6 +90,7 @@ export default () => {
         const lightBoxCaption = document.createElement('figcaption');
         lightBoxCaption.classList.add('lightbox-caption');
 
+        const currentItems = document.querySelectorAll('.lightbox-item');
         const currentImages = document.querySelectorAll('.lightbox-image');
         let currentIndex;
         if (currentImages !== undefined) {
@@ -106,18 +107,22 @@ export default () => {
         lightBoxItem.appendChild(lightBoxImage);
         lightBoxItem.appendChild(lightBoxCaption);
         lightBoxList.insertBefore(lightBoxItem, lightBoxList.firstElementChild);
-        lightBoxList.style.transform = 'translateX(-87rem)';
+        currentItems[0].style.width = `${currentItems[0].clientWidth}px`;
+        lightBoxItem.style.width = `${currentItems[0].clientWidth}px`;
+        lightBoxList.style.width = `${currentItems[0].clientWidth * 2}px`;
+        lightBoxList.style.transform = `translateX(-${currentItems[0].clientWidth}px)`;
         animateSlides({
           duration: 700,
           timing: t => (t < 0.5 ? 4 * (t ** 3) : ((t - 1) * ((2 * t) - 2) * ((2 * t) - 2)) + 1),
           // t => (1−t)3P1 + 3(1−t)2tP2 +3(1−t)t2P3 + t3P4)
           draw: (progress) => {
-            lightBoxList.style.transform = `translateX(${-87 + (progress * 87)}rem`;
+            lightBoxList.style.transform = `translateX(${-currentItems[0].clientWidth + (progress * currentItems[0].clientWidth)}px)`;
           },
         });
         setTimeout(() => {
           lightBoxList.removeChild(lightBoxList.lastElementChild);
           lightBoxList.style.transform = 'translateX(0)';
+          lightBoxList.style.width = '100%';
           lightBoxLeft.removeEventListener('click', stopEvent, false);
           lightBoxLeft.addEventListener('click', leftButtonHandler, false);
         }, 750);
@@ -133,6 +138,7 @@ export default () => {
         const lightBoxCaption = document.createElement('figcaption');
         lightBoxCaption.classList.add('lightbox-caption');
 
+        const currentItems = document.querySelectorAll('.lightbox-item');
         const currentImages = document.querySelectorAll('.lightbox-image');
         let currentIndex;
         if (currentImages !== undefined) {
@@ -149,17 +155,21 @@ export default () => {
         lightBoxItem.appendChild(lightBoxImage);
         lightBoxItem.appendChild(lightBoxCaption);
         lightBoxList.appendChild(lightBoxItem);
+        currentItems[0].style.width = `${currentItems[0].clientWidth}px`;
+        lightBoxItem.style.width = `${currentItems[0].clientWidth}px`;
+        lightBoxList.style.width = `${currentItems[0].clientWidth * 2}px`;
         lightBoxList.style.transform = 'translateX(0)';
         animateSlides({
           duration: 700,
           timing: t => (t < 0.5 ? 4 * (t ** 3) : ((t - 1) * ((2 * t) - 2) * ((2 * t) - 2)) + 1), // t => Math.pow(t, 2),
           draw: (progress) => {
-            lightBoxList.style.transform = `translateX(${0 - (progress * 87)}rem`;
+            lightBoxList.style.transform = `translateX(${0 - (progress * currentItems[0].clientWidth)}px)`;
           },
         });
         setTimeout(() => {
           lightBoxList.removeChild(lightBoxList.firstElementChild);
-          lightBoxList.style.transform = 'translateX(0rem)';
+          lightBoxList.style.transform = 'translateX(0)';
+          lightBoxList.style.width = '100%';
           lightBoxRight.removeEventListener('click', stopEvent, false);
           lightBoxRight.addEventListener('click', rightButtonHandler, false);
         }, 750);
