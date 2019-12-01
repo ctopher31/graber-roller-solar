@@ -12,17 +12,20 @@ export const getSwatches = filename => new Promise((resolve, reject) => {
 
 export const buildSwatch = (swatch, thumbPath, fullSizepath) => {
   const swatchContainer = document.createElement('div');
-  swatchContainer.classList.add('swatch', 'swatch-image-container');
+  swatchContainer.classList.add('swatch', 'swatch-container');
+  const swatchImageContainer = document.createElement('div');
+  swatchImageContainer.classList.add('swatch-image-container');
   const swatchImage = document.createElement('img');
   swatchImage.classList.add('swatch-image');
   swatchImage.src = `${thumbPath}/${swatch.filename}`;
   swatchImage.alt = swatch.colorName;
   swatchImage.setAttribute('data-source', `${fullSizepath}/${swatch.filename}`);
   swatchImage.setAttribute('data-color-name', swatch.colorName);
-  swatchImage.setAttribute('data-collection-name', swatch.collectionName);
+  swatchImage.setAttribute('data-collection-name', swatch.collection);
   swatchImage.setAttribute('data-style', swatch.productLine);
   swatchImage.setAttribute('data-light-control', swatch.lightControl);
-  swatchContainer.appendChild(swatchImage);
+  swatchImageContainer.appendChild(swatchImage);
+  swatchContainer.appendChild(swatchImageContainer);
   return swatchContainer;
 };
 
