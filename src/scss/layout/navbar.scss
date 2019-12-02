@@ -9,6 +9,8 @@
   flex: none;
   left: 0;
   overflow: hidden;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   position: fixed;
   right: 0;
   top: 0;
@@ -30,26 +32,35 @@
   }
 }
 
-.navbar--content {
-  display: flex;
-  flex: 1 0 auto;
-  justify-content: center;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
 .brand {
-  align-items: center;
-  display: flex;
-  flex: 0 1 auto;
+  display: none;
+
+  @include sm {
+    align-items: center;
+    display: flex;
+    flex: 0 1 auto;
+  }
 }
 
 .brand--logo {
-  width: 7rem;
+  width: 5.5rem;
+
+  @include sm {
+    width: 7rem;
+  }
 }
 
 .title {
   flex: 0 1 auto;
+  font-size: 1rem;
+  left: 50%;
+  position: absolute;
+  text-transform: uppercase;
+  transform: translatex(-50%);
+
+  @include sm {
+    font-size: 1.125rem;
+  }
 }
 
 .nav-button {
@@ -62,15 +73,37 @@
   width: 2rem;
 }
 
+.nav-button--up-down {
+  font-size: 0.875rem;
+  line-height: 1.4em;
+  padding-top: 0;
+  text-transform: uppercase;
+  width: 4rem;
+}
+
+.nav-button--icon {
+  height: 0.925rem;
+}
+
 .arrow-icon {
   height: 100%;
 }
 
-.nav-button--left {
-  justify-self: flex-start;
+.arrow-icon--up-down {
+  height: 100%;
+  width: 2.25rem;
 }
 
-.nav-button--right {
+.nav-button--left {
+  justify-self: flex-start;
+  margin-left: -0.5rem;
+  margin-right: auto;
+}
+
+.nav-button--right,
+.nav-button--up-down {
   justify-self: flex-end;
+  margin-left: auto;
+  margin-right: -0.5rem;
 }
 /* Navbar ============================================== */

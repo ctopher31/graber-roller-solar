@@ -5,23 +5,36 @@
 {% set pageLeft = '#' %}
 {% set pageRight = '#' %}
 {% set topLevelNav = true %}
+{% set showBrand = true %}
 {% set showTitle = true %}
+{% set upDownArrow = true %}
 
 {% block content %}
+
+<section id="collections-filter" class="filter-section collections--filter-section">
+  <div class="filter product-filter">
+    <p>&#8213; Product Line &#8213;</p>
+    <ul id="product-filter-list" class="filter--list product-filter--list" data-option-key="product-line">
+      <li class="filter--list-item"><button class="filter--button selected" data-option-value="all">All</button></li>
+      <li class="filter--list-item"><button class="filter--button" data-option-value="Roller Shades">Roller</button></li>
+      <li class="filter--list-item"><button class="filter--button" data-option-value="Solar Shades">Solar</button></li>
+    </ul>
+  </div>
+  <div class="filter light-filter">
+    <p>&#8213; Light Control &#8213;</p>
+    <ul id="light-filter-list" class="filter--list light-filter--list" data-option-key="light-control">
+      <li class="filter--list-item"><button class="filter--button selected" data-option-value="all">All</button></li>
+      <li class="filter--list-item"><button class="filter--button" data-option-value="Sheer">Sheer</button></li>
+      <li class="filter--list-item"><button class="filter--button" data-option-value="Light Filtering">Light Filtering</button></li>
+      <li class="filter--list-item"><button class="filter--button" data-option-value="Room Darkening">Room Darkening</button></li>
+      <li class="filter--list-item"><button class="filter--button" data-option-value="Blackout">Blackout</button></li>
+    </ul>
+  </div>
+</section>
 
 <!-- Content -->
 <section class="content collections-content">
   <h1 class="view--intro-heading">Collections to Inspire</h1>
-  <ul class="filters">
-    <li class="filters--list-item">
-      <label for="roller-shades">Roller Shades</label>
-      <input class="filter" type="checkbox" id="roller-shades" name="productline" value="Roller Shades">
-    </li>
-    <li class="filters--list-item">
-      <label for="solar-shades">Solar Shades</label>
-      <input class="filter" type="checkbox" id="solar-shades" name="productline" value="Solar Shades">
-    </li>
-  </ul>
   <div class="swatch-collections" id="swatches"></div>
 </section>
 <!-- Content -->

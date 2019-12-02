@@ -56,6 +56,20 @@ const run = () => {
 
   if (document.getElementById('swatches')) {
     SwatchGallery();
+    const sortButton = document.getElementById('sort-button');
+    const sortIcon = document.getElementById('sort-icon');
+    const filterSection = document.getElementById('collections-filter');
+    sortButton.addEventListener('click', () => {
+      if (filterSection.classList.contains('open')) {
+        filterSection.classList.remove('open');
+        sortButton.classList.remove('open');
+        sortIcon.src = '/assets/images/icons/down-arrow.svg';
+      } else {
+        filterSection.classList.add('open');
+        sortButton.classList.add('open');
+        sortIcon.src = '/assets/images/icons/up-arrow.svg';
+      }
+    });
   }
 };
 

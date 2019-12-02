@@ -1,8 +1,10 @@
 // Theme Styles
 .view--intro-heading {
   flex: 1 0 100%;
-  margin-bottom: 1rem;
-  padding-top: 1rem;
+  font-size: 2.5rem;
+  line-height: 1.125em;
+  margin-bottom: 0.5rem;
+  padding-top: 1.5rem;
   text-align: center;
 }
 
@@ -115,4 +117,34 @@
       background-color: $brand-color-sheer-layered;
     }
   }
+}
+
+// Filter styles
+.filter-section {
+  background-color: #605d58;
+  height: 0;
+  overflow: hidden;
+  padding-top: 0;
+  position: absolute;
+  transition: height 0.5s, padding-top 0.5s;
+  width: 100%;
+  z-index: 10;
+}
+
+.filter-section.open {
+  height: 8.5rem;
+  padding-top: 0.5rem;
+}
+
+.filter--list {
+  display: flex;
+  list-style: none;
+}
+
+.filter--list-item {
+  
+}
+
+.filter--button.selected {
+  font-weight: bold;
 }
