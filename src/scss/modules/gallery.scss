@@ -6,6 +6,16 @@
   width: 100%;
 }
 
+.gallery-heading {
+  flex: 1 0 auto;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  text-align: center;
+  text-transform: initial;
+  width: 100%;
+}
+
 .gallery-list {
   display: flex;
   flex: 1 0 100%;
@@ -47,8 +57,9 @@
 .lightbox-outer-container {
   background-color: rgba($base-black, 0.9);
   bottom: 3rem;
+  flex: none;
   left: 0;
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 4.2rem;
   z-index: 9;
@@ -96,7 +107,19 @@
   width: 100%;
 }
 
+.lightbox-image-container {
+  height: 14rem;
+  overflow: hidden;
+  width: 100%;
+
+  @include sm { 
+    height: 30rem;
+  }
+}
+
 .lightbox-image {
+  height: 100%;
+  object-fit: cover;
   width: 100%;
 }
 
@@ -131,13 +154,13 @@
   }
 
   &.lightbox-left {
-    background-image: url('../images/icons/left-arrow.svg');
+    background-image: url('../images/icons/left-arrow-white.svg');
     background-position: 1rem center;
     left: 0;
   }
 
   &.lightbox-right {
-    background-image: url('../images/icons/right-arrow.svg');
+    background-image: url('../images/icons/right-arrow-white.svg');
     background-position: calc(100% - 1rem) center;
     right: 0;
   }

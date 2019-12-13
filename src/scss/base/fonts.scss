@@ -1,40 +1,48 @@
 // Fonts
 @font-face {
-  font-family: 'LFTEtica Light';
+  font-family: 'LFTEtica';
+  font-weight: 300;
   src: url('../fonts/LFTEtica-Light.ttf');
 }
 
 @font-face {
-  font-family: 'LFTEtica Regular';
+  font-family: 'LFTEtica';
+  font-weight: 400;
   src: url('../fonts/LFTEtica-Regular.ttf');
 }
 
 @font-face {
-  font-family: 'LFTEtica Book';
+  font-family: 'LFTEtica';
+  font-weight: 500;
   src: url('../fonts/LFTEtica-Book.ttf');
 }
 
 @font-face {
-  font-family: 'LFTEtica Bold';
+  font-family: 'LFTEtica';
+  font-weight: 700;
   src: url('../fonts/LFTEtica-Bold.ttf');
 }
 
 @font-face {
-  font-family: 'CapitoliumHead2 Light';
+  font-family: 'CapitoliumHead2';
+  font-weight: 400;
   src: url('../fonts/CapitoliumHead2-Light.ttf');
 }
 
 @font-face {
-  font-family: 'CapitoliumHead2 Regular';
+  font-family: 'CapitoliumHead2';
+  font-weight: 500;
   src: url('../fonts/CapitoliumHead2-Regular.ttf');
 }
 
 @font-face {
-  font-family: 'CapitoliumHead2 SemiBold';
+  font-family: 'CapitoliumHead2';
+  font-weight: 600;
   src: url('../fonts/CapitoliumHead2-SemiBold.ttf');
 }
 
 @font-face {
-  font-family: 'CapitoliumHead2 Bold';
+  font-family: 'CapitoliumHead2';
+  font-weight: 700;
   src: url('../fonts/CapitoliumHead2-Bold.ttf');
 }

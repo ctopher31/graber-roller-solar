@@ -16,7 +16,8 @@ const setSwipeNav = () => {
 };
 
 const loadPdf = (event) => {
-  cordova.InAppBrowser.open(event.target.getAttribute('data-href'), '_blank', 'location=no');
+  event.preventDefault();
+  cordova.InAppBrowser.open(event.target.getAttribute('data-href'), '_blank', 'location=no,toolbar=yes,toolbarposition=bottom,enableViewportScale=yes');
 };
 
 const run = () => {
@@ -56,6 +57,22 @@ const run = () => {
 
   if (document.getElementById('swatches')) {
     SwatchGallery();
+    const sortButton = document.getElementById('sort-button');
+    const sortIcon = document.getElementById('sort-icon');
+    const filterSection = document.getElementById('collections-filter');
+    document.addEventListener('click', (event) => {
+      event.stopPropagation();
+      filterSection.classList.remove('open');
+      sortIcon.classList.remove('flip');
+    });
+    filterSection.addEventListener('click', (event) => {
+      event.stopPropagation();
+    });
+    sortButton.addEventListener('click', (event) => {
+      event.stopPropagation();
+      filterSection.classList.toggle('open');
+      sortIcon.classList.toggle('flip');
+    });
   }
 };
 
@@ -76,9 +93,12 @@ const app = {
   // The scope of 'this' is the event. In order to call the 'receivedEvent'
   // function, we must explicitly call 'app.receivedEvent(...);'
   onDeviceReady() {
-    if (document.getElementById('swatch-collections-link')) {
-      const pdfLink = document.getElementById('swatch-collections-link');
-      pdfLink.addEventListener('click', loadPdf, false);
+    if (document.getElementById('home')) {
+      const catalog = document.getElementById('catalog');
+      catalog.addEventListener('click', loadPdf);
+
+      const guide = document.getElementById('trend-guide');
+      guide.addEventListener('click', loadPdf);
     }
   },
 };

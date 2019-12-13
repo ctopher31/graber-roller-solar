@@ -1,118 +1,154 @@
 // Theme Styles
 .view--intro-heading {
   flex: 1 0 100%;
-  margin-bottom: 1rem;
-  padding-top: 1rem;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.125em;
+  margin-bottom: 0.5rem;
+  padding-top: 1.5rem;
   text-align: center;
+  text-transform: initial;
 }
 
 // Home ------------------------------------------------------------------------
-.home {
+.intro-content--container {
+  padding-top: 2rem;
+  width: 100%;
 
-  .column-1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-right: 1.75rem;
-    position: relative;
-    width: calc(33.3333% - 1rem);
+  @include sm {
+    margin-left: auto;
+    margin-right: auto;
+    width: 58%;
   }
 
-  .column-2 {
-    height: 100%;
-    width: 66.68%;
+  @include md {
+    width: 90%;
+  }
+}
+
+.intro-content--list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+  @include sm {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
+}
+
+.intro-content--list-item {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  width: 100%;
+
+  @include sm {
+    width: 50%;
   }
 
-  .logo {
-    width: 21.6rem;
+  @include md {
+    width: 25%;
   }
+}
 
-  .button-container {
-    bottom: -0.5rem;
-    flex: none;
-    position: absolute;
-  }
+.intro-item--container {
+  border: 0.0625rem solid #c9d0c3;
+  height: 100%;
+  position: relative;
+}
 
-  .cta-button {
-    background-color: transparent;
-    border: 0;
-    display: block;
-    padding: 0;
+.intro-content--image-container {
+  width: 100%;
+}
 
-    &:active {
-      background-color: $base-gray-light3;
-    }
+.intro-contnt--image {
+  width: 100%;
+}
 
-    &:focus {
-      outline-width: 0;
-    }
-  }
+.intro-content--text {
+  display: block;
+  font-size: 1rem;
+  padding: 0.5rem;
+  text-align: center;
+  width: 100%;
+}
 
-  .cta-icon {
-    height: 4.725rem;
-    width: 20.475rem;
-  }
+.intro-content--link {
+  background: transparent;
+  border: 0;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
 
-  .gallery-button {
-    margin-bottom: 1.5rem;
-  }
+// Filter styles
+.filter-section {
+  background-color: #605d58;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 0;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0;
+  position: absolute;
+  text-align: center;
+  top: 4.2rem;
+  transition: height 0.5s, padding-top 0.5s, padding-bottom 0.5s;
+  width: 100%;
+  z-index: 10;
+}
 
-  .start-link {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: block;
-    height: calc(50% - 1rem);
-    width: 100%;
+.filter-section.open {
+  height: 10.5rem;
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+}
 
-    &:focus,
-    &:active {
-      opacity: .7;
-      outline-width: 0;
-    }
-  }
+.filter {
+  margin-bottom: 0.5rem;
+  padding-top: 0.5rem;
+}
 
-  .product-link-container {
-    display: block;
-    left: 38%;
-    position: relative;
-    top: 33%;
-  }
+.filter--list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
 
-  .product-link-title {
-    display: block;
-    font-size: 2.2rem;
-    letter-spacing: 0.133rem;
-    line-height: 1.2em;
-    margin-bottom: 2.4rem;
-    text-transform: uppercase;
-  }
+.filter--list-item {
+  margin: 0;
+}
 
-  .product-link-button {
-    color: $base-white;
-    display: block;
-    font-size: 1.6rem;
-    letter-spacing: 0.133rem;
-    padding: 1.3rem;
-    text-align: center;
-    text-transform: uppercase;
-    width: 14rem;
-  }
+.filter-heading {
+  color: #fcfcfc;
+  font-family: 'LFTEtica', helvetica, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.0625rem;
+  line-height: 1em;
+  margin: 0;
+  padding: 0;
+}
 
-  .cellular-pleated-start {
-    background-image: url('../images/cellular-pleated-start.png');
-    margin-bottom: 2rem;
+.filter--button {
+  background: transparent;
+  border: 0;
+  color: #fcfcfc;
+  font-size: 1rem;
+  opacity: 0.7;
+  padding: 0.5rem;
+}
 
-    .product-link-button {
-      background-color: $brand-color-cellular-pleated;
-    }
-  }
-
-  .sheer-layered-start {
-    background-image: url('../images/sheer-layered-start.png');
-
-    .product-link-button {
-      background-color: $brand-color-sheer-layered;
-    }
-  }
+.filter--button.selected {
+  opacity: 1;
 }

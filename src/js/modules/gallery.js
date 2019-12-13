@@ -43,15 +43,12 @@ const stopEvent = (event) => {
 const imageClickHandler = (event) => {
   const lightBoxItem = document.createElement('div');
   lightBoxItem.classList.add('lightbox-item');
-  const lightBoxImage = document.createElement('img');
-  lightBoxImage.classList.add('lightbox-image');
-  const lightBoxCaption = document.createElement('figcaption');
-  lightBoxCaption.classList.add('lightbox-caption');
-  lightBoxImage.src = event.target.src;
-  lightBoxImage.alt = event.target.alt;
-  lightBoxCaption.textContent = event.target.alt;
-  lightBoxItem.appendChild(lightBoxImage);
-  lightBoxItem.appendChild(lightBoxCaption);
+  lightBoxItem.innerHTML = (
+    `<div class="lightbox-image-container">
+      <img class="lightbox-image" src="${event.target.src}" alt="${event.target.alt}" />
+    </div>
+    <figcaption class="lightbox-caption">${event.target.alt}</figcaption>`
+  );
   lightBoxList.appendChild(lightBoxItem);
   lightBox.classList.remove('hide');
   return false;
@@ -72,9 +69,9 @@ export default () => {
         container.appendChild(img);
         listItem.appendChild(container);
         img.addEventListener('click', imageClickHandler, false);
-        if (image.productline === 'roller') {
+        if (image.productline === 'Roller Shades') {
           rollerGallery.appendChild(listItem);
-        } else if (image.productline === 'solar') {
+        } else if (image.productline === 'Solar Shades') {
           solarGallery.appendChild(listItem);
         }
         return false;
@@ -85,10 +82,6 @@ export default () => {
         lightBoxLeft.addEventListener('click', stopEvent, false);
         const lightBoxItem = document.createElement('div');
         lightBoxItem.classList.add('lightbox-item');
-        const lightBoxImage = document.createElement('img');
-        lightBoxImage.classList.add('lightbox-image');
-        const lightBoxCaption = document.createElement('figcaption');
-        lightBoxCaption.classList.add('lightbox-caption');
 
         const currentItems = document.querySelectorAll('.lightbox-item');
         const currentImages = document.querySelectorAll('.lightbox-image');
@@ -101,11 +94,12 @@ export default () => {
           currentIndex = images.length;
         }
 
-        lightBoxImage.src = `${path}/${images[currentIndex - 1].filename}`;
-        lightBoxImage.alt = images[currentIndex - 1].caption;
-        lightBoxCaption.textContent = images[currentIndex - 1].caption;
-        lightBoxItem.appendChild(lightBoxImage);
-        lightBoxItem.appendChild(lightBoxCaption);
+        lightBoxItem.innerHTML = (
+          `<div class="lightbox-image-container">
+            <img class="lightbox-image" src="${path}/${images[currentIndex - 1].filename}" alt="${images[currentIndex - 1].caption}" />
+          </div>
+          <figcaption class="lightbox-caption">${images[currentIndex - 1].caption}</figcaption>`
+        );
         lightBoxList.insertBefore(lightBoxItem, lightBoxList.firstElementChild);
         currentItems[0].style.width = `${currentItems[0].clientWidth}px`;
         lightBoxItem.style.width = `${currentItems[0].clientWidth}px`;
@@ -133,10 +127,6 @@ export default () => {
         lightBoxRight.addEventListener('click', stopEvent, false);
         const lightBoxItem = document.createElement('div');
         lightBoxItem.classList.add('lightbox-item');
-        const lightBoxImage = document.createElement('img');
-        lightBoxImage.classList.add('lightbox-image');
-        const lightBoxCaption = document.createElement('figcaption');
-        lightBoxCaption.classList.add('lightbox-caption');
 
         const currentItems = document.querySelectorAll('.lightbox-item');
         const currentImages = document.querySelectorAll('.lightbox-image');
@@ -149,11 +139,12 @@ export default () => {
           currentIndex = -1;
         }
 
-        lightBoxImage.src = `${path}/${images[currentIndex + 1].filename}`;
-        lightBoxImage.alt = images[currentIndex + 1].caption;
-        lightBoxCaption.textContent = images[currentIndex + 1].caption;
-        lightBoxItem.appendChild(lightBoxImage);
-        lightBoxItem.appendChild(lightBoxCaption);
+        lightBoxItem.innerHTML = (
+          `<div class="lightbox-image-container">
+            <img class="lightbox-image" src="${path}/${images[currentIndex + 1].filename}" alt="${images[currentIndex + 1].caption}" />
+          </div>
+          <figcaption class="lightbox-caption">${images[currentIndex + 1].caption}</figcaption>`
+        );
         lightBoxList.appendChild(lightBoxItem);
         currentItems[0].style.width = `${currentItems[0].clientWidth}px`;
         lightBoxItem.style.width = `${currentItems[0].clientWidth}px`;

@@ -2,15 +2,16 @@
 .swatch-collections {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -0.25rem;
-  margin-right: -0.25rem;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+  padding-top: 2rem;
 }
 
 .swatch-container {
-  margin-bottom: 0.5rem;
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
-  width: 33.3333%;
+  margin-bottom: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  width: 50%;
 
   @include sm {
     width: 25%;
@@ -21,24 +22,78 @@
   }
 }
 
-.swatch-image-container {
+.swatch--inner-container {
+  background-color: #fff;
+  border: 0.0625rem solid rgba(#c9d0c3, 0.7);
   height: 100%;
+  position: relative;
+}
+
+.swatch-image-container {
+  height: 0;
   overflow: hidden;
+  padding-bottom: 100%;
+  position: relative;
   width: 100%;
 }
 
 .swatch-image {
   height: 100%;
   object-fit: cover;
+  position: absolute;
   width: 100%;
+}
+
+.swatch-info--list {
+  list-style: none;
+  padding: 0.75rem 0.5rem 0.5rem;
+}
+
+.swatch-info--list-item {
+  font-size: 0.75rem;
+  line-height: 1.4em;
+  margin: 0 0 0.25rem;
+}
+
+.color-name {
+  font-family: 'CapitoliumHead2', Helvetica, Arial, sans-serif;
+  font-size: 1.125rem;
+}
+
+.color-number-collection-name {
+  font-size: 0.625rem;
+  letter-spacing: 0.025rem;
+  overflow-wrap: break-word;
+  text-transform: uppercase;
+}
+
+.new-tag {
+  background-color: #6d969d;
+  border-radius: 100%;
+  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+  color: #fcfcfc;
+  font-size: 0.75rem;
+  font-weight: 600;
+  height: 2.75rem;
+  left: -0.5rem;
+  line-height: 2rem;
+  padding: 0.5rem;
+  padding-top: 0.4rem;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  top: -0.5rem;
+  width: 2.75rem;
+  z-index: 9;
 }
 
 // Swatch Lightbox -------------------------------------------------------------
 .swatch-lightbox-container {
   background-color: rgba($base-black, 0.8);
   bottom: 3rem;
+  flex: none;
   left: 0;
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 4.2rem;
   z-index: 9;
@@ -51,33 +106,39 @@
     content: ' ';
     height: 3rem;
     position: absolute;
-    right: 0.375rem;
-    top: 0.5rem;
+    right: 0.75rem;
+    top: 0.75rem;
     width: 3rem;
 
     @include sm {
       background-size: 2rem;
       height: 4rem;
-      right: 0.5rem;
       width: 4rem;
     }
   }
 }
 
 .swatch-lightbox-image-container {
-  margin: 4.2rem auto 0;
-  max-width: 15rem;
+  height: auto;
+  margin: 1rem auto;
   position: relative;
-  width: 100%;
+  text-align: center;
+  width: calc(100% - 2rem);
 
-  @include sm {
-    margin: 5.2rem auto 0;
-    max-width: 25rem;
+  @include md {
+    height: calc(100% - 2rem);
+    width: auto;
   }
 }
 
 .swatch-lightbox-image {
+  height: auto;
   width: 100%;
+
+  @include md {
+    height: 100%;
+    width: auto;
+  }
 }
 
 .swatch-lightbox-caption {
@@ -86,4 +147,19 @@
   line-height: 1.5em;
   padding-top: 0.5rem;
   text-align: center;
+
+  @include md {
+    display: none;
+  }
+}
+
+.loader {
+  background-image: url('../images/loading.gif');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 5rem 5rem;
+  display: none;
+  height: 0;
+  padding-bottom: 99%;
+  width: 100%;
 }

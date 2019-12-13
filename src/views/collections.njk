@@ -5,15 +5,38 @@
 {% set pageLeft = '#' %}
 {% set pageRight = '#' %}
 {% set topLevelNav = true %}
+{% set showBrand = true %}
 {% set showTitle = true %}
+{% set upDownArrow = true %}
 
 {% block content %}
 
-<!-- Content -->
-<section class="content collections-content">
-  <h1 class="view--intro-heading">Collections to Inspire</h1>
-  <div class="swatch-collections" id="swatches"></div>
+<section id="collections-filter" class="filter-section collections--filter-section">
+  <div class="filter product-filter">
+    <h2 class="filter-heading">Product Line</h2>
+    <ul id="product-filter-list" class="filter--list product-filter--list" data-option-key="product-line">
+      <li class="filter--list-item"><button class="filter--button product-filter selected" data-option-value="All">All</button></li>
+      <li class="filter--list-item"><button class="filter--button product-filter" data-option-value="Roller Shades">Roller Shades</button></li>
+      <li class="filter--list-item"><button class="filter--button product-filter" data-option-value="Solar Shades">Solar Shades</button></li>
+    </ul>
+  </div>
+  <div class="filter light-filter">
+    <h2 class="filter-heading">Swatches</h2>
+    <ul id="swatch-filter-list" class="filter--list swatch-filter--list" data-option-key="swatch">
+      <li class="filter--list-item"><button class="filter--button swatch-filter selected" data-option-value="All">All Swatches</button></li>
+      <li class="filter--list-item"><button class="filter--button swatch-filter" data-option-value="New">New Swatches</button></li>
+    </ul>
+  </div>
 </section>
+
+<!-- Content -->
+<div class="content-container transition-container">
+  <section class="content collections-content">
+    {# <h1 class="view--intro-heading">Collections to Inspire</h1> #}
+    <div id="loader" class="loader"></div>
+    <div class="swatch-collections" id="swatches"></div>
+  </section>
+</div>
 <!-- Content -->
 
 <div id="lightbox" class="swatch-lightbox-container hide">

@@ -5,22 +5,26 @@
 {% set pageLeft = '#' %}
 {% set pageRight = '#' %}
 {% set topLevelNav = true %}
+{% set leftArrow = false %}
+{% set showBrand = true %}
 {% set showTitle = true %}
 
 {% block content %}
 
 <!-- Content -->
-<section class="content gallery-content">
-  <h1 class="view--intro-heading">Photography to Inspire</h1>
-  <div id="gallery" class="gallery-container">
-    <h2 class="gallery-heading">Roller Shades</h2>
-    <div id="roller-gallery" class="gallery-list roller-gallery"></div>
-  </div>
-  <div class="gallery-container">
-    <h2 class="gallery-heading">Solar Shades</h2>
-    <div id="solar-gallery" class="gallery-list solar-gallery"></div>
-  </div>
-</section>
+<div class="content-container transition-container">
+  <section class="content gallery-content">
+    {# <h1 class="view--intro-heading">Photography to Inspire</h1> #}
+    <div id="gallery" class="gallery-container">
+      <h2 class="gallery-heading">Roller Shades</h2>
+      <div id="roller-gallery" class="gallery-list roller-gallery"></div>
+    </div>
+    <div class="gallery-container">
+      <h2 class="gallery-heading">Solar Shades</h2>
+      <div id="solar-gallery" class="gallery-list solar-gallery"></div>
+    </div>
+  </section>
+</div>
 <!-- Content -->
 
 <div id="lightbox" class="lightbox-outer-container hide">

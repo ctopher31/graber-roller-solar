@@ -1,1 +1,11 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168.67 136.51"><title>home</title><polyline points="143.63 67.69 143.36 132.01 25.8 132.01 26.06 67.69 26.06 67.69" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:9px"/><polyline points="42.14 45.03 84.84 6.01 156.54 67.69 143.63 67.69" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:9px"/><polyline points="26.06 67.69 13.15 67.69 26.06 57.68" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:9px"/><rect x="69.56" y="79.29" width="29.52" height="52.72" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:9px"/><polyline points="26.06 59.79 26.06 57.68 26.06 24.99 42.14 24.99 42.14 45.03" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:9px"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="190px" height="184px" viewBox="0 0 190 184" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>Combined Shape</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Mockups" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="home-icon" transform="translate(-5.000000, -6.000000)" fill="#FCFCFC" fill-rule="nonzero">
+            <path d="M122,116 L79,116 L79,190 L23,190 L23,80 L5,80 L54,41.832 L54,6 L79,6 L79,22.358 L100,6 L195,80 L170,80 L170,190 L122,190 L122,116 Z" id="Combined-Shape"></path>
+        </g>
+    </g>
+</svg>

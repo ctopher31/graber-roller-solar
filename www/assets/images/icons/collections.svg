@@ -1,1 +1,20 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 137.3 135"><title>collections</title><path d="M135.26,109.56l-3.22-23a3.88,3.88,0,0,0-4.37-3.29L95.09,87.84l-47.5,34.47L46.27,125a6.11,6.11,0,0,1-.29,1l86-12A3.88,3.88,0,0,0,135.26,109.56Z" transform="translate(-2.5 -2.5)" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:9px"/><path d="M49.35,120.07L95.09,87.84l31-22.5a3.88,3.88,0,0,0,.86-5.4L113.33,41.15a3.88,3.88,0,0,0-5.4-.86L77.34,62.49Z" transform="translate(-2.5 -2.5)" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:9px"/><path d="M44.07,123.77c0,0.41,2.76-1.46,2.76-1.46L77,62.49,93.14,30.34a3.84,3.84,0,0,0-1.65-5.19L70.76,14.82c-1.9-.95-5.73-0.16-6.68,1.74L43.36,55.23Z" transform="translate(-2.5 -2.5)" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:9px"/><path d="M44,123.77L43.29,55.23V10.07c0-3.4.32-3.06-3.08-3.06h-24C12.76,7,7,6.67,7,10.07V126.61c0,5.93-.93,6.39,9.15,6.39h24c2.9,0,3.87-1.13,3.85-2.89C44.05,130,44,124.18,44,123.77Zm-8.38,1A5.33,5.33,0,1,1,41,119.41,5.33,5.33,0,0,1,35.66,124.74Z" transform="translate(-2.5 -2.5)" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:9px"/><circle cx="33.16" cy="116.91" r="5.33" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:9px"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="193px" height="175px" viewBox="0 0 193 175" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>graber-icons-swatchbook-ic18-v1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M11.4144223,155.653116 L23.79875,160.81162 L23.79875,77.6469582 L1.34277026,131.616683 C-2.45161953,141.005759 2.07361579,151.781744 11.4144223,155.653116 Z M191.622909,121.579052 L145.779872,11.324762 C142.936583,4.59974913 136.378996,0.159644221 129.050518,0 C126.657749,0 124.154854,0.369177262 121.752074,1.38690917 L53.6432776,29.4743144 C44.2924595,33.3656423 39.8272937,44.0618051 43.6717414,53.4209476 L89.5047664,163.66526 C93.4092836,172.994469 104.1417,177.444552 113.532565,173.613091 L181.551256,145.515708 C190.962144,141.684247 195.477368,130.95815 191.622909,121.579052 Z M51.6109263,50.657107 C51.6109263,43.054051 57.8481423,36.8379041 65.4769682,36.8379041 C73.1057941,36.8379041 79.34301,43.054051 79.34301,50.657107 C79.34301,58.2501853 73.1057941,64.4663322 65.4769682,64.4663322 C57.8481423,64.4663322 51.6109263,58.2501853 51.6109263,50.657107 Z M42.3702356,156.57107 C42.3702356,166.6985 50.6898607,175 60.851617,175 L74.2571261,175 L42.3702356,98.1811962 L42.3702356,156.57107 L42.3702356,156.57107 Z" id="path-1"></path>
+    </defs>
+    <g id="Mockups" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="collections-icon" transform="translate(0.000000, -12.000000)">
+            <g id="graber-icons-swatchbook-ic18-v1" transform="translate(0.000000, 12.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-2"></g>
+                <polygon id="Fill-1" fill="#FCFCFC" mask="url(#mask-2)" points="-3 178 195 178 195 0 -3 0"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
