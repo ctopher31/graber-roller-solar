@@ -7,6 +7,8 @@ const loader = document.getElementById('loader');
 
 const filterDeck = ['All', 'All'];
 
+export const filterItems = (filterDeck, items) => items.reduce((accum, item) => [...accum, ...Object.keys(item).filter(key => filterDeck.every(filterItem => item[key] === filterItem))], []);
+
 export default () => {
   getSwatches('assets/js/graber-roller-solar-swatches.json')
     .then((swatches) => {
