@@ -26,6 +26,10 @@ const run = () => {
   }
   if (navigator.userAgent.match(/(iPad|iPhone|iPod)/i)) {
     document.body.classList.add('ios');
+
+    if (window.screen.height / window.screen.width === 812 / 375) {
+      document.body.classList.add('iphonex');
+    }
   }
 
   setSwipeNav();
